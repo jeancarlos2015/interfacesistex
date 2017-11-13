@@ -8,7 +8,7 @@ appUsuario.controller("controllerUsuarios", function($scope, $http){
 	$scope.usuario={};
 	
 	$scope.salvarUsuario = function(){
-		$http.post("http://servicocontroleusuarios.herokuapp.com/usuario", $scope.usuario)
+		$http.post("https://servicocontroleusuarios.herokuapp.com/usuario", $scope.usuario)
 		.then(function(response) {
 //			$scope.usuarios.push(response.data);
 			
