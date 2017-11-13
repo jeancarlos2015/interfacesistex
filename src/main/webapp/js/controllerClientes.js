@@ -8,10 +8,11 @@ appCliente.controller("controllerClientes", function($scope, $http){
 	$scope.cliente={};
 	
 	$scope.salvarCliente = function(){
-		$http.post("http://servicocontroleclientes.herokuapp.com/cliente", $scope.cliente)
+		$http.post("https://servicocontroleusuarios.herokuapp.com/cliente", $scope.cliente)
 		.then(function(response) {
 //			$scope.clientes.push(response.data);
-			$scope.mensagem="Cliente cadastrado com sucesso!!!";
+			
+			$scope.mensagem="Cliente Registrado!!!";
 			console.log(response.data);
 			console.log(response.status);
 		} , function(response) {
