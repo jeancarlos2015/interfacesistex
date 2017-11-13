@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="appUsuario">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Inicio </title>
+        <title> Cadastro De Senha </title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,13 +11,33 @@
         <link rel="icon" href="img/icon.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <body>
+
+        
+        <script src="js/controllerUsuarios.js"></script>
+    </head>
+    <!-- <body ng-controller="listarUsuarios"> -->
+    <!-- 	<label>Nome</label> -->
+    <!-- 	<br /> -->
+    <!-- 	<input type="text" ng-model="usuario.uname" /> -->
+    <!-- 	<br /> -->
+    <!-- 	<label>Senha</label> -->
+    <!-- 	<br /> -->
+    <!-- 	<input type="password" ng-model="usuario.pass" /> -->
+    <!-- 	<br /> -->
+    <!-- 	<input type="button" value="salvar" ng-click="salvarUsuario()" /> -->
+    <!-- 	<div ng-repeat="user in usuarios"> -->
+    <!-- 		{{user.idusuario+'|'+user.uname}}</div> -->
+
+    <!-- </body> -->
+
+
+    <body class="newsletter bg-grey" ng-controller="controllerUsuarios">
 
         <!-- CABEÇALHO -->
-        <header class="container3 ">
-            <!--            <a href="index.jsp"><h1 class="logo"> SISTEC-Especializada em Soluções Digitais </h1></a>-->
+        <header class="container3 paracima_acesso">
             <div class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container3">
                     <div class="navbar-header">
@@ -32,47 +51,31 @@
                     <div class="navbar-collapse collapse" id="searchbar">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li id="userPage">
-                                <a href="cadastroClientes.html"><i class="icon-user"></i>Cadastro De Cliente</a>
-                            </li>
+                            <li id="userPage"><a href="cadastroClientes.html"><i class="icon-user"></i>Cadastro</a></li>
                             <li><a href="acesso.html" data-prevent="">Acesso</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li id="userPage">
-                                <a href="cadastroLogin.html"><i class="icon-user"></i>Cadastro de Login</a>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="index.html" title="pesquisa">Apagar</a></li>
-                        </ul>
-                        <form class="navbar-form" method="post" action="Controlador">
-                            <div class="form-group" style="display:inline;">
-                                <div class="input-group" style="display:table;">
-                                    <span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"></span></span>
-                                    <input class="form-control" name="nome" placeholder="Pesquise Aqui" autocomplete="off" autofocus="autofocus" type="text">
-                                   
-                                    <input class="oculto" type="submit"/>
-                                </div>
-                            </div>
-                        </form>
 
+                        </ul>
                     </div><!--/.nav-collapse -->
                 </div>
             </div>
+
         </header>
-        <form method="post" class="subir">
-            <div class="figure1 paracima_meio">
-                <div class="figure">
-                    
-                </div>    
+
+        <section class="container3 paracima_meio1">
+            <h1 class="bg-titulo-white">CADASTRO DE LOGIN</h1>
+            <form>
+
+                <input class="bg-white radius campo" type="text"  name="user" placeholder="Usuário" required ng-model="usuario.uname"/>
+                <input class="bg-white radius campo" type="password"  name="password" placeholder="Senha" required />
+                <input class="bg-white radius campo" type="password"  name="confirmpassword" placeholder="Confirmar Senha" required ng-model="usuario.pass"/>
+                <input type="button" class="bg-white radius campo" value="salvar" ng-click="salvarUsuario()"/>
+            </form>
+            <div class="alert centralizar">
+                <h3 class="mensagem">{{mensagem}}</h3>
             </div>
-            
-        </form>
-            
-
-
+        </section>
         <!-- RODAPÉ -->
-        <footer class="rodape container3 bg-gradient abaixo">
+        <footer class="rodape container3 bg-gradient">
             <div class="social-icons">
                 <a href="https://pt-br.facebook.com/"><i class="fa fa-facebook"></i></a>
                 <a href="https://twitter.com/login?lang=pt"><i class="fa fa-twitter"></i></a>
@@ -84,5 +87,6 @@
         </footer>
     </body>
 </body>
-</html>
 
+
+</html>
