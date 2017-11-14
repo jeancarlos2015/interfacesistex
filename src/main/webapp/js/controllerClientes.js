@@ -8,18 +8,16 @@ appCliente.controller("controllerClientes", function($scope, $http){
 	$scope.cliente={};
 	
 	$scope.salvarCliente = function(){
-		$http.post("https://servicocontroleusuarios.herokuapp.com/cliente", $scope.cliente)
+		$http.post("http://servicocontroleusuarios.herokuapp.com/cliente", $scope.cliente)
 		.then(function(response) {
 //			$scope.clientes.push(response.data);
-			
-			$scope.mensagem="Cliente Registrado!!!";
+			$scope.mensagem="Cliente cadastrado com sucesso!!!";
 			console.log(response.data);
 			console.log(response.status);
 		} , function(response) {
-			console.log(response.data);
-			console.log(response.status);
+			$scope.mensagem="Cliente Nao foi cadastrado !!!";
 		});
-	}
+	};
 	
 //	$scope.carregarClientes = function() {
 //		$http.get("http://servicocontroleclientes.herokuapp.com/cliente")
