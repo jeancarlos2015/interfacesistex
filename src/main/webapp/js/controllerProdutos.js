@@ -1,25 +1,14 @@
-var appProduto = angular.module("appProduto", []);
-
-appProduto.controller("controllerProdutos", function ($scope, $http) {
-
-    $scope.produtos = [];
-    $scope.carregarProdutos = function () {
-        $http.get("https://servicocontrolepedidos.herokuapp.com/produto")
-                .then(function(response) {
-                    $scope.produtos = response.data;
-                }, function(response) {
-                    $scope.mensagem = "Erro nenhum produto foi listado!!!";
-                });
-    };
-//    
-//app.controller('myCtrl', function($scope, $http) {
-//    $http({
-//        method : "GET",
-//        url : "welcome.htm"
-//    }).then(function mySuccess(response) {
-//        $scope.myWelcome = response.data;
-//    }, function myError(response) {
-//        $scope.myWelcome = response.statusText;
-//    });
-//});
+angular.module('appProdutos', [])
+.controller('controllerProdutos', function($scope, $http) {
+    $scope.produto = {};
+   $scope.salvarProduto = function (){
+       $http.post('https://servicocontrolepedidos.herokuapp.com/produto',$scope.produto).
+        then(function(response) {
+            if(response.data){
+                $scope.mensagemProduto = "Produto cadastrado com sucesso!!!";
+            }
+            
+        });
+   };
+       
 });

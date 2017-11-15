@@ -48,7 +48,7 @@ public class FiltroRestrito implements Filter {
         HttpServletRequest req = (HttpServletRequest)request;
         HttpServletResponse resp = (HttpServletResponse)response;
         HttpSession session = req.getSession();
-        if(session.getAttribute("usuario")!=null){
+        if(session.getAttribute("mensagem")!=null){
             chain.doFilter(request, response);
         }else{
 
