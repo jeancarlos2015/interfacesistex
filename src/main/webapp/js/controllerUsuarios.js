@@ -16,14 +16,7 @@ angular.module('appUsuario', [])
                 $http.post('https://servicocontroleusuarios.herokuapp.com/usuario/autenticar', $scope.usuarioautent).
                         then(function (response) {
                             if (response.data) {
-                                //$scope.mensagemUsuario = response.data;
-                                $http.go("usuario"); //exemplo do .state abaixo
-
-                                .state("usuario", {
-                                    url: "/Usuario",
-                                    controller: "UsuarioCtrl",
-                                    templateUrl: "meu/caminho/usuario.html"
-                                })
+                                 $scope.mensagemUsuario="conta liberada, em fase de teste";
                             } else {
                                 $scope.mensagemUsuario = "Usuário ou Senha Inválidos";
                             }
