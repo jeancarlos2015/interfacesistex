@@ -134,12 +134,12 @@
             <div class="container" id="bookonline">
                 <h3 class="wow fadeInUp" data-wow-delay="0.3s">QUER SER NOSSO CLIENTE, CADASTRA-SE AGORA</h3>
                 <form ng-click="salvarCliente()">
-                    <input type="text" class="name wow zoomIn" placeholder="Seu Nome" ng-model="cliente.nome">
-                    <input type="text" class="name wow zoomIn" placeholder="Seu Email" ng-model="cliente.email">
-                    <input type="text" class="name wow zoomIn" placeholder="Seu Telefone" ng-model="cliente.telefone">
-                    <input type="text" class="name wow zoomIn" placeholder="Seu Endereço" ng-model="cliente.endereco">
-                    <input type="text" class="name wow zoomIn" placeholder="Seu CPF" ng-model="cliente.cpf">
-                    <input type="text" class="name wow zoomIn" placeholder="Sua Data de Nascimento" ng-model="cliente.datanascimento">
+                    <input type="text" class="name wow zoomIn" placeholder="Seu Nome" ng-model="cliente.nome" required>
+                    <input type="text" class="name wow zoomIn" placeholder="Seu Email" ng-model="cliente.email" required>
+                    <input type="text" class="name wow zoomIn" placeholder="Seu Telefone" ng-model="cliente.telefone" required>
+                    <input type="text" class="name wow zoomIn" placeholder="Seu Endereço" ng-model="cliente.endereco" required>
+                    <input type="text" class="name wow zoomIn" placeholder="Seu CPF" ng-model="cliente.cpf" required>
+                    <input type="text" class="name wow zoomIn" placeholder="Sua Data de Nascimento" ng-model="cliente.datanascimento" required>
 
 
                     <button class="booknow wow fadeInUp"> Cadastrar </button>

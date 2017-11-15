@@ -50,9 +50,9 @@
             <div class="container" id="bookonline">
                 <h3 class="wow fadeInUp" data-wow-delay="0.3s"> CADASTRE SEU LOGIN</h3>
                 <form>
-                    <input type="text" class="name wow zoomIn" placeholder="Seu Usuario" ng-model="usuario.uname">
-                    <input type="password" class="name wow zoomIn" placeholder="Seu Senha" ng-model="pass">
-                    <input type="password" class="name wow zoomIn" placeholder="Confirmar Senha" ng-model="usuario.pass">
+                    <input type="text" class="name wow zoomIn" placeholder="Seu Usuario" ng-model="usuario.uname" required>
+                    <input type="password" class="name wow zoomIn" placeholder="Seu Senha" ng-model="pass" required>
+                    <input type="password" class="name wow zoomIn" placeholder="Confirmar Senha" ng-model="usuario.pass" required>
                     <button class="booknow wow fadeInUp"  ng-click="salvarUsuario()"> Cadastrar Login</button>
 
                 </form>
