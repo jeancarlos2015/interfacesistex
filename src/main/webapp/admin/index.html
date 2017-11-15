@@ -22,6 +22,10 @@
         <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        
+         <script src="js/chart.min.js"></script>
+        <script src="js/chart-data.js"></script>
+        <script src="js/script.js"></script>
     </head>
 
     <body>
@@ -35,8 +39,8 @@
                     <div class="user-section"><a href="#">
                             <img src="http://via.placeholder.com/50x50" alt="profile photo" class="circle float-left profile-photo" width="50" height="auto">
                             <div class="username">
-                                <h4>Jean Carlos Penas</h4>
-                                <p>Administrador</p>
+                                <h4>Pedidos</h4>
+<!--                                <p>Administrador</p>-->
                             </div>
                         </a></div>
                 </div>
@@ -148,7 +152,8 @@
                                     <img src="http://via.placeholder.com/45x45" alt="profile photo" class="circle float-left profile-photo" width="45" height="auto">
                                     <div class="float-left ml-1">
                                         <p class="m-0"><strong>Pedido 1</strong> <span class="text-muted">Frango Frito, Macarrão, Feijão Tropeiro</span></p>
-                                        <p class="text-small text-muted">30 minutes ago</p>
+                                        <p class="text-small text-muted">Cliente Fulano de tal</p>
+                                        <p class="text-small text-muted">Pendente</p>
                                     </div>
                                     <div class="clearfix"></div>
                                     <hr class="m-0 mb-2" />
@@ -272,7 +277,7 @@
                                         </div>-->
 
                 <!--Tables-->
-                <h5 class="mt-2">Tables</h5><a class="anchor" name="tables"></a>
+<!--                <h5 class="mt-2">Tables</h5><a class="anchor" name="tables"></a>
                 <div class="row grid-responsive">
                     <div class="column ">
                         <div class="card">
@@ -322,7 +327,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
                 <!--Grid-->
                 <!--                <h5 class="mt-2">Grid</h5><a class="anchor" name="grid"></a>
@@ -370,43 +375,7 @@
             </section>
         </div>
 
-        <script src="js/chart.min.js"></script>
-        <script src="js/chart-data.js"></script>
-        <script>
-            window.onload = function () {
-                var chart1 = document.getElementById("line-chart").getContext("2d");
-                window.myLine = new Chart(chart1).Line(lineChartData, {
-                    responsive: true,
-                    scaleLineColor: "rgba(0,0,0,.2)",
-                    scaleGridLineColor: "rgba(0,0,0,.05)",
-                    scaleFontColor: "#c5c7cc"
-                });
-                var chart2 = document.getElementById("bar-chart").getContext("2d");
-                window.myBar = new Chart(chart2).Bar(barChartData, {
-                    responsive: true,
-                    scaleLineColor: "rgba(0,0,0,.2)",
-                    scaleGridLineColor: "rgba(0,0,0,.05)",
-                    scaleFontColor: "#c5c7cc"
-                });
-                var chart4 = document.getElementById("pie-chart").getContext("2d");
-                window.myPie = new Chart(chart4).Pie(pieData, {
-                    responsive: true,
-                    segmentShowStroke: false
-                });
-                var chart5 = document.getElementById("radar-chart").getContext("2d");
-                window.myRadarChart = new Chart(chart5).Radar(radarData, {
-                    responsive: true,
-                    scaleLineColor: "rgba(0,0,0,.05)",
-                    angleLineColor: "rgba(0,0,0,.2)"
-                });
-                var chart6 = document.getElementById("polar-area-chart").getContext("2d");
-                window.myPolarAreaChart = new Chart(chart6).PolarArea(polarData, {
-                    responsive: true,
-                    scaleLineColor: "rgba(0,0,0,.2)",
-                    segmentShowStroke: false
-                });
-            };
-        </script>			
+       			
 
     </body>
 </html> 
