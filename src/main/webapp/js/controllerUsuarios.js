@@ -7,17 +7,16 @@ angular.module('appUsuario', [])
             if(response.data){
                 $scope.mensagemUsuario = "Usuario cadastrado com sucesso!!!";
             }
-            
         });
    };
-   
+   $scope.usuarioautent = {};
    $scope.autenticarUsuario = function (){
-       $http.post('https://servicocontroleusuarios.herokuapp.com/usuario/autenticar',$scope.usuario).
+       $http.post('https://servicocontroleusuarios.herokuapp.com/usuario/autenticar',$scope.usuarioautent).
         then(function(response) {
-            if(response.data==="true"){
-                $scope.mensagemUsuario = "Usuario habilitado";
+            if(response.data){
+                $scope.mensagemUsuario = response.data;
             }else{
-                $scope.mensagemUsuario = "Usuario ou Senha Inválidos";
+                $scope.mensagemUsuario = response.data;
             }
             
         });

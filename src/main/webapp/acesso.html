@@ -3,7 +3,7 @@
     Free  Template by Mohamed Sobhy
     https://www.facebook.com/Mido.HHH
 -->
-<html lang="en" ng-app="appUsuario">
+<html lang="en" ng-app="appUsuario" ng-controller="controllerUsuarios">
     <head>
         <title>Restaurante Das Cidas</title>
 
@@ -31,7 +31,7 @@
         <script type="text/javascript" src="js/init.js"></script>
         <script type="text/javascript" src="js/manipulaTela1.js"></script>
     </head>
-    <body  ng-controller="controllerUsuarios">
+    <body  >
 
         <!--============ Navigation ============-->
         <div class="headerwrapper">
@@ -160,15 +160,22 @@
             <div class="container" id="bookonline">
                 <h3 class="wow fadeInUp" data-wow-delay="0.3s"> ACESSE SUA CONTA AGORA</h3>
                 <form>
-                    <input type="text" class="name wow zoomIn" placeholder="Usuario" ng-model="usuario.uname">
-                    <input type="password" class="name wow zoomIn" placeholder="Sua Senha" ng-model="usuario.pass">
-                    
-
+                    <input type="text" class="name wow zoomIn" placeholder="Usuario" ng-model="usuarioautent.uname">
+                    <input type="password" class="name wow zoomIn" placeholder="Sua Senha" ng-model="usuarioautent.pass">
                     <button class="booknow wow fadeInUp"  ng-click="autenticarUsuario()"> Entrar</button>
-
+                    <br>
+                    {{mensagemUsuario}}
+                    <br>
+                </form>
+                
+                <h3> OU</h3>
+                <form action="cadastroLogin.html">
+                    
+                    <button class="booknow wow fadeInUp" > Cadastre um novo Login</button>
+                    
                 </form>
                 <br>
-                <h2> {{mensagemUsuario}} </h2>
+                
                 <br>
                 <br>
 
