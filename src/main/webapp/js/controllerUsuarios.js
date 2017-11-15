@@ -25,6 +25,20 @@ appUsuario.controller("controllerUsuarios", function($scope, $http){
             };
 		
 	};
+        contador = 0;
+	$scope.autenticarUsuario = function(){
+            
+                $http.post("https://servicocontroleusuarios.herokuapp.com/usuario/autenticar", $scope.usuario)
+		.then(function(response) {
+			
+                            $scope.mensagem = response.data;
+                        
+		} , function(response) {
+			console.log(response.data);
+			console.log(response.status);
+		});
+            };
+            
 	
 //	$scope.carregarUsuarios = function() {
 //		$http.get("http://servicocontroleusuarios.herokuapp.com/usuario")

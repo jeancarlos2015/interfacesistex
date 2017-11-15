@@ -14,8 +14,6 @@ appCliente.controller("controllerClientes", function($scope, $http){
 			$scope.mensagem="Cliente cadastrado com sucesso!!!";
 			console.log(response.data);
 			console.log(response.status);
-		} , function(response) {
-			$scope.mensagem="Cliente Nao foi cadastrado !!!";
 		});
 	};
 	
