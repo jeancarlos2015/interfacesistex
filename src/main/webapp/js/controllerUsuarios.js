@@ -6,6 +6,8 @@ angular.module('appUsuario', [])
         then(function(response) {
             if(response.data){
                 $scope.mensagemUsuario = "Usuario cadastrado com sucesso!!!";
+            }else{
+                $scope.mensagemUsuario = "Use um cadastro diferente !!!";
             }
         });
    };
@@ -16,7 +18,7 @@ angular.module('appUsuario', [])
             if(response.data){
                 $scope.mensagemUsuario = response.data;
             }else{
-                $scope.mensagemUsuario = response.data;
+                $scope.mensagemUsuario = "Usuário ou Senha Inválidos";
             }
             
         });
